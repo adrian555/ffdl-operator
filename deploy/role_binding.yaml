@@ -5,8 +5,8 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: ffdl-operator
-  namespace: ffdl
+  namespace: default
 roleRef:
   kind: ClusterRole
-  name: cluster-admin
+  name: ffdl-operator
   apiGroup: rbac.authorization.k8s.io

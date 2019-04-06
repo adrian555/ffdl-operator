@@ -1,4 +1,0 @@
-appVersion: "3.3"
-description: Helper Service for Fabric for Deep Learning (FfDL)
-name: ffdl-helper
-version: 0.1.1

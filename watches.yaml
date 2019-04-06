@@ -1,5 +1,0 @@
----
-- version: v1alpha1
-  group: ffdl.ibm.com
-  kind: FfDL
-  chart: /opt/helm/helm-charts/ffdl

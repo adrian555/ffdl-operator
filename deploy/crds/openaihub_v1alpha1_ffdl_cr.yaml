@@ -1,7 +1,7 @@
-apiVersion: ffdl.ibm.com/v1alpha1
+apiVersion: openaihub.ibm.com/v1alpha1
 kind: FfDL
 metadata:
-  name: example-ffdl
+  name: ffdl-cr
 spec:
   # Default values copied from <project_dir>/helm-charts/ffdl/values.yaml
   
@@ -9,7 +9,6 @@ spec:
   # This is a YAML-formatted file.
   # Declare variables to be passed into your templates.
   
-  shared_volume_storage_class: "ibmc-file-gold"
   replicaCount: 1
   
   image:
