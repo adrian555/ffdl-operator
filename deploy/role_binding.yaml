@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: ffdl-operator
-  namespace: default
+  namespace: ffdl
 roleRef:
   kind: ClusterRole
   name: ffdl-operator

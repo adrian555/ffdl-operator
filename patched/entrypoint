@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+# This is documented here:
+# https://docs.openshift.com/container-platform/3.11/creating_images/guidelines.html#openshift-specific-guidelines
+
+if ! whoami &>/dev/null; then
+  if [ -w /etc/passwd ]; then
+    echo "${USER_NAME:-helm}:x:$(id -u):$(id -g):${USER_NAME:-helm} user:${HOME}:/sbin/nologin" >> /etc/passwd
+  fi
+fi
+
+sed -i "s/  namespace.*$/  namespace: $FFDL_NAMESPACE/g" /opt/helm/helm-charts/ffdl/values.yaml
+sed -i "s/  shared_volume_storage_class.*$/  shared_volume_storage_class: $FFDL_STORAGECLASS/g" /opt/helm/helm-charts/ffdl/values.yaml 
+exec ${OPERATOR} run helm --watches-file=/opt/helm/watches.yaml $@

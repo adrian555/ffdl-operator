@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: ffdl-sub
+  namespace: local
+spec:
+  name: ffdl
+  source: ffdl-ocs
+  sourceNamespace: local
+  startingCSV: ffdl-operator.v0.0.1
+  channel: alpha
+  installPlanApproval: Automatic

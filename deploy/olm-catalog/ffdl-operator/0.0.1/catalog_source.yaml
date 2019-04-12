@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  labels:
+    name: ffdl-ocs
+    namespace: local
+  name: ffdl
+spec:
+  displayName: FfDL operator
+  publisher: IBM
+  sourceType: internal

@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha2
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: openaihub.ibm.com
+  name: ffdl-og
+  namespace: local
+spec:
+  targetNamespaces:
+  - local

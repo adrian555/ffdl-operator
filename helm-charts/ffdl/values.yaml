@@ -5,10 +5,12 @@
 replicaCount: 1
 
 ffdl-helper:
-  shared_volume_storage_class: "nfs-dynamic"
+  namespace: default
+  shared_volume_storage_class: default
 
 ffdl-core:
-  shared_volume_storage_class: "nfs-dynamic"
+  namespace: default
+  shared_volume_storage_class: default
 
 image:
   repository: nginx
