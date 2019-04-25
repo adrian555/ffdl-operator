@@ -7,6 +7,7 @@ replicaCount: 1
 ffdl-helper:
   namespace: default
   shared_volume_storage_class: default
+  localstorage: false
 
 ffdl-core:
   namespace: default

@@ -30,6 +30,8 @@ spec:
             - name: OPERATOR_NAME
               value: "ffdl-operator"
             - name: FFDL_NAMESPACE
-              value: "ffdl"
+              value: "default"
             - name: FFDL_STORAGECLASS
-              value: "nfs-dynamic"
+              value: ""
+            - name: FFDL_LOCALSTORAGE
+              value: "true"

@@ -11,4 +11,5 @@ fi
 
 sed -i "s/  namespace.*$/  namespace: $FFDL_NAMESPACE/g" /opt/helm/helm-charts/ffdl/values.yaml
 sed -i "s/  shared_volume_storage_class.*$/  shared_volume_storage_class: $FFDL_STORAGECLASS/g" /opt/helm/helm-charts/ffdl/values.yaml 
+sed -i "s/  localstorage.*$/  localstorage: $FFDL_LOCALSTORAGE/g" /opt/helm/helm-charts/ffdl/values.yaml
 exec ${OPERATOR} run helm --watches-file=/opt/helm/watches.yaml $@
